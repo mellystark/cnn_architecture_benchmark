@@ -1,0 +1,27 @@
+CNN ARCHITECTURE BENCHMARK REPORT
+========================================================================
+
+DATASET
+------------------------------------------------------------------------
+Oxford-IIIT Pet
+Classes : 37
+Train   : 2944
+Val     : 736
+Test    : 3669
+Image   : 224 x 224
+
+FINAL RESULTS
+------------------------------------------------------------------------
+     display_name  test_accuracy  test_macro_f1  params_million  model_size_mb  latency_ms        fps  training_seconds
+         ResNet18       0.892614       0.890531       11.195493      42.784678     3.50045 285.677556        108.343288
+         ResNet50       0.919869       0.919026       23.583845      90.270768     8.29540 120.548738        113.683108
+  EfficientNet-B0       0.908422       0.906840        4.054945      15.755425    14.53420  68.803236         97.093822
+MobileNetV3-Large       0.887708       0.886512        4.249429      16.408517     9.60860 104.073434         84.292056
+
+INTERPRETATION GUIDE
+------------------------------------------------------------------------
+- Accuracy / Macro-F1: classification quality.
+- Params / checkpoint MB: model capacity and storage cost.
+- Latency / FPS: single-image inference cost on this machine.
+- Training time: hardware- and environment-dependent.
+- One model need not dominate every metric.
